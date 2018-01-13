@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+		//输出2,2,2
+//			var test=[];
+//			for(var i=0;i<3;i++){
+//				test.push(function(){
+//					console.log("<<<"+i)
+//				})				
+//			}
+//			console.log("end for.")
+//			for(var j=0;j<test.length;j++){
+//				test[j]()
+//			}
+			
+			
+			
+			//输出0,1,2
+			var test=[];
+			for(var i=0;i<3;i++){
+				(function(n){
+					test.push(function(){
+						console.log("<<<"+n)
+					})
+				})(i);				
+			}
+			for(var j=0;j<test.length;j++){
+				test[j]()
+			}
+
+			
+		</script>
+	</body>
+</html>

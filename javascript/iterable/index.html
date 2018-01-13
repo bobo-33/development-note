@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//ES6位统一集合类型，引入iterable(array,map,set都属于该类型)
+			//iterable类型可以用for...of遍历
+			
+			var m=new Map();
+			m.set("jessica",90);
+			m.set("Bob",34);
+			for(var i of m){
+				console.log(i)
+			}
+			
+			
+			
+			var s=new Set();
+			s.add("56");
+			s.add(2);
+			for(var i of s){
+				console.log(i)
+			}
+		</script>
+	</body>
+</html>

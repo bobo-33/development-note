@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//Map,Set是ES6新增数据类型
+			//Map--键值对
+			//Set--值{有唯一性，过滤掉重复的key,新增重复的会覆盖原有的key}
+			
+			
+			//Map
+			var m=new Map();//空map
+			m.set("jessica",90)//新增键值对
+			m.set("Bob",59)
+			m.get("jessica")
+			console.log(m.get("jessica"))//查找键值对
+			m.delete("jessica")//删除键值对
+			console.log(m)//[["bob",59]]
+			m.has("jessica")//查找是否含有某一个键值
+			console.log(m.has("jessica"))//false
+			
+			
+			
+			//Set
+			var s=new Set();//创建空set
+			s.add(1);//新增key
+			s.add(5);
+			s.add("3");
+			console.log(s);
+			s.add(3);
+			s.add(1);//会覆盖已经存在 的key
+			console.log(s)
+			s.delete("3")
+			console.log(s)//删除key
+		</script>
+	</body>
+</html>
