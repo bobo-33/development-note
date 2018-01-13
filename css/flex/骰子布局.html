@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>flex-example</title>
+		<link rel="stylesheet" type="text/css" href="../reset.css"/>
+		<style>
+			body{
+				background-color: #000;
+			}
+			.box{
+				width: 100px;
+				height: 100px;
+				padding: 10px;
+				border-radius: 20px;
+				background-color: #f2f2f2;
+				box-shadow: 4px 6px 24px #ccc;
+				display: flex;
+			}
+			.item{
+				width: 20px;
+				height: 20px;
+				border-radius: 50%;
+				background-color: #000;
+			}
+			.sigle-item .box-1{
+				justify-content: flex-start;
+			}
+			.sigle-item .box-1 .item{
+				align-self: flex-start;
+			}
+			.sigle-item .box-2{
+				justify-content: center;
+			}
+			.sigle-item .box-2 .item{
+				align-self: flex-start;
+			}
+			.sigle-item .box-3{
+				justify-content: flex-end;
+			}
+			.sigle-item .box-3 .item{
+				align-self: flex-start;
+			}
+			.sigle-item .box-4{
+				justify-content: flex-start;
+			}
+			.sigle-item .box-4 .item{
+				align-self: center;
+			}
+			.sigle-item .box-5{
+				justify-content: center;
+			}
+			.sigle-item .box-5 .item{
+				align-self: center;
+			}
+			.sigle-item .box-6{
+				justify-content: center;
+			}
+			.sigle-item .box-6 .item{
+				align-self: flex-end;
+			}
+			.sigle-item .box-7{
+				justify-content: flex-end;
+			}
+			.sigle-item .box-7 .item{
+				align-self: flex-end;
+			}
+			.sigle-item,.double-item,.three-item,.four-item,.six-item,.nine-item{
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+			}
+			.double-item .box-1{
+				display: flex;
+				justify-content: space-between;
+			}
+			.double-item .box-1 .item{
+				align-self: flex-start;
+			}
+			.double-item .box-2{
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+			}
+			.double-item .box-2 .item{
+				align-self: flex-start;
+			}
+			.double-item .box-3{
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+			}
+			.double-item .box-3 .item{
+				align-self: center;
+			}
+			.double-item .box-4{
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+			}
+			.double-item .box-4 .item{
+				align-self: flex-end;
+			}
+			.double-item .box-5{
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-start;
+			}
+			.double-item .box-5 .item:last-child{
+				align-self: center;
+			}
+			.double-item .box-6{
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+			}
+			.double-item .box-6 .item:last-child{
+				align-self: flex-end;
+			}
+			.three-item .box-1{
+				display: flex;
+				justify-content: space-between;
+			}
+			.three-item .box-1 .item:first-child{
+				align-self: flex-start;
+			}
+			.three-item .box-1 .item:nth-child(2){
+				align-self: center;
+			}
+			.three-item .box-1 .item:last-child{
+				align-self: flex-end;
+			}
+			.four-item .box-1{
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+			}
+			.four-item .box-1>div:first-child{
+				display: flex;
+				justify-content: space-between;
+			}
+			.four-item .box-1>div:last-child{
+				display: flex;
+				justify-content: flex-end;
+			}
+			.four-item .box-2{
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+			}
+			.four-item .box-2>div{
+				display: flex;
+				justify-content: space-between;
+			}
+			.six-item .box-1{
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+			}
+			.six-item .box-1>div{
+				display: flex;
+				justify-content: space-between;
+			}
+			.six-item .box-2{
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+			}
+			.six-item .box-2>div{
+				display: flex;
+				justify-content: space-between;
+			}
+			.six-item .box-3{
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+			}
+			.six-item .box-3>div:first-child,.six-item .box-3>div:last-child{
+				display: flex;
+				justify-content: space-between;
+			}
+			.six-item .box-3>div:nth-child(2){
+				display: flex;
+				justify-content: center;
+			}
+			.nine-item .box-1{
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+			}
+			.nine-item .box-1>div{
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="sigle-item">
+			<div class="box box-1">
+				<span class="item"></span>
+			</div>
+			<div class="box box-2">
+				<span class="item"></span>
+			</div>
+			<div class="box box-3">
+				<span class="item"></span>
+			</div>
+			<div class="box box-4">
+				<span class="item"></span>
+			</div>
+			<div class="box box-5">
+				<span class="item"></span>
+			</div>
+			<div class="box box-6">
+				<span class="item"></span>
+			</div>
+			<div class="box box-7">
+				<span class="item"></span>
+			</div>
+		</div>
+		
+		<div class="double-item">
+			<div class="box box-1">
+				<span class="item"></span>
+				<span class="item"></span>
+			</div>
+			<div class="box box-2">
+				<span class="item"></span>
+				<span class="item"></span>
+			</div>
+			<div class="box box-3">
+				<span class="item"></span>
+				<span class="item"></span>
+			</div>
+			<div class="box box-4">
+				<span class="item"></span>
+				<span class="item"></span>
+			</div>
+			<div class="box box-5">
+				<span class="item"></span>
+				<span class="item"></span>
+			</div>
+			<div class="box box-6">
+				<span class="item"></span>
+				<span class="item"></span>
+			</div>
+		</div>
+	
+		<div class="three-item">
+			<div class="box box-1">
+				<span class="item"></span>
+				<span class="item"></span>
+				<span class="item"></span>
+			</div>
+		</div>
+		
+		<div class="four-item">
+			<div class="box box-1">
+				<div>
+					<span class="item"></span>
+					<span class="item"></span>
+					<span class="item"></span>
+				</div>
+				<div>
+					<span class="item"></span>
+				</div>
+			</div>
+			<div class="box box-2">
+				<div>
+					<span class="item"></span>
+					<span class="item"></span>
+				</div>
+				<div>
+					<span class="item"></span>
+					<span class="item"></span>
+				</div>
+			</div>
+		</div>
+		
+		<div class="six-item">
+			<div class="box box-1">
+				<div>
+					<span class="item"></span>
+					<span class="item"></span>
+					<span class="item"></span>
+				</div>
+				<div>
+					<span class="item"></span>
+					<span class="item"></span>
+					<span class="item"></span>
+				</div>
+			</div>
+			<div class="box box-2">
+				<div>
+					<span class="item"></span>
+					<span class="item"></span>
+				</div>
+				<div>
+					<span class="item"></span>
+					<span class="item"></span>
+				</div>
+				<div>
+					<span class="item"></span>
+					<span class="item"></span>
+				</div>
+			</div>
+			<div class="box box-3">
+				<div>
+					<span class="item"></span>
+					<span class="item"></span>
+					<span class="item"></span>
+				</div>
+				<div>
+					<span class="item"></span>
+				</div>
+				<div>
+					<span class="item"></span>
+					<span class="item"></span>
+				</div>
+			</div>
+		</div>
+	
+		<div class="nine-item">
+			<div class="box box-1">
+				<div>
+					<span class="item"></span>
+					<span class="item"></span>
+					<span class="item"></span>
+				</div>
+				<div>
+					<span class="item"></span>
+					<span class="item"></span>
+					<span class="item"></span>
+				</div>
+				<div>
+					<span class="item"></span>
+					<span class="item"></span>
+					<span class="item"></span>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
