@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	</head>
+	<body>
+		
+		<script type="text/javascript">
+//本地存储
+		//localStorage
+			//存储数据
+			localStorage.setItem("test1","test")//开发者工具->Application->Storage下查看
+			//读取数据
+			console.log(localStorage.getItem("test1"));
+			//获取key值
+			console.log(localStorage.key(0)) 
+			//清除
+			localStorage.clear()//开发者工具->Application->Storage下查看
+			
+		//sessionStorage
+			//存储
+			sessionStorage.setItem("mySession","session-value")
+			//API同localStorage
+			
+		//存储img
+		
+		var url="//www.baidu.com/img/bd_logo1.png";
+		localStorage.setItem("imgUrl",url);
+		var imgSrc=localStorage.getItem("imgUrl");
+		$("body").append("<img src='"+imgSrc+"'/>")
+		
+		
+		</script>
+	</body>
+</html>
