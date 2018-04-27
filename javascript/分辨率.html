@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			function center(){            
+			//判断显示器分辨率           
+				var winWidth  = document.documentElement.clientWidth; 
+				console.log(winWidth)
+				if(winWidth==1366){                
+					$("<link>").attr({ rel: "stylesheet", type: "text/css", href: "css/style2.css" }) .appendTo("head")        
+				}      
+
+			}
+			center()
+		</script>
+	</body>
+</html>
