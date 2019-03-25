@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="plugins/bootstrap-table/bootstrap-table.min.css"/>
+		<style type="text/css">
+			.p20{
+				padding: 20px;
+			}
+			.mb20{
+				margin-bottom: 20px;
+			}
+			.form-group label{
+				line-height: 34px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="p20">
+			<!-- 工具栏-->
+			<div id="toolbar" class="mb20">
+				<button type="button" class="btn btn-info btn-rounded btn-outline " onclick="daochu()"><i class="fa fa-cloud-upload mr5"></i>导出信息</button>
+			</div>
+			<table id="metTable_a"  class="table table-bordered   table-hover table-striped">
+				<thead>
+					<tr>
+						<th data-field="checkbox" data-halign="center" data-align="center" ><input name="btSelectAll"  type="checkbox"  id="btSelectAll"></th>
+						<th data-field="xh" data-halign="center" data-align="center">序号</th>
+						<th data-field="S_FIELD_CH" data-halign="center" data-align="center">导出列名称</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td data-halign="center" data-align="center" ><input name="btSelectItem" type="checkbox"></td>
+						<td data-halign="center" data-align="center">1</td>
+						<td data-halign="center" data-align="center "  field="schByThree">学校编号</td>
+					</tr>
+					<tr>
+						<td data-halign="center" data-align="center"><input name="btSelectItem" type="checkbox"></td>
+						<td data-halign="center" data-align="center">2</td>
+						<td data-halign="center" data-align="center " field="schoolNam">学校名称</td>
+					</tr>
+					<tr>
+						<td data-halign="center" data-align="center"><input name="btSelectItem" type="checkbox"></td>
+						<td data-halign="center" data-align="center">3</td>
+						<td data-halign="center" data-align="center" field="schTypeName">学校类型</td>
+					</tr>
+					<tr>
+						<td data-halign="center" data-align="center"><input name="btSelectItem" type="checkbox"></td>
+						<td data-halign="center" data-align="center">4</td>
+						<td data-halign="center" data-align="center" field="bb">办别</td>
+					</tr>
+					<tr>
+						<td data-halign="center" data-align="center"><input name="btSelectItem" type="checkbox"></td>
+						<td data-halign="center" data-align="center">5</td>
+						<td data-halign="center" data-align="center" field="buildDate">建校时间</td>
+					</tr>
+					<tr>
+						<td data-halign="center" data-align="center"><input name="btSelectItem" type="checkbox"></td>
+						<td data-halign="center" data-align="center">6</td>
+						<td data-halign="center" data-align="center" field="streetName">所属街乡</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="plugins/bootstrap/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<!--<script src="plugins/bootstrap-table/bootstrap-table-zh-CN.js" type="text/javascript" charset="utf-8"></script>-->
+		<script src="plugins/bootstrap-table/bootstrap-table.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="plugins/layer/layer.min.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>
